@@ -12,14 +12,14 @@ Meta:
 !--    db.connection.rna.username=reader
 !--    db.connection.rna.password=ENC(RMVX9NZSnf4cvjQFs7FPWZ5SOFvngQOQ4Y3+ugSWhas=)
 
-Scenario: Verify database result set
-When I execute SQL query `
+!-- Scenario: Verify database result set
+!--When I execute SQL query `
 SELECT id, name
 FROM rnc_taxonomy
 ORDER by id
 LIMIT 10
 ` against `rna` and save result to scenario variable `data`
-Then `${data}` matching rows using `id` from `rna` is equal to data from:
+!--Then `${data}` matching rows using `id` from `rna` is equal to data from:
 |id|name                     |
 |1 |root                     |
 |2 |Bacteria                 |
